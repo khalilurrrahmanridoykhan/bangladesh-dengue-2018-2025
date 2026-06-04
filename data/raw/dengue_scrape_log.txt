@@ -1,0 +1,9 @@
+Run: 2026-06-04T11:54:11.846514
+
+  Dashboard fetch: 200, 207547 bytes
+  Annual: 9 year rows
+  Monthly: 36 rows across 3 years
+  Weekly: 159 rows
+  Daily 2026: 154 days (2026-01-01 to 2026-06-03)
+  Division 2026: 9 divisions
+  Weekly division 2026: 176 rows, 8 divisions
