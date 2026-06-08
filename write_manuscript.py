@@ -158,7 +158,7 @@ tr.font.bold = True
 auth_p = doc.add_paragraph()
 auth_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 auth_p.paragraph_format.space_after = Pt(6)
-ar = auth_p.add_run("[Author Name]")
+ar = auth_p.add_run("Khalilur Rahman Ridoy Khan¹, Watan Rahman²")
 ar.font.name = "Times New Roman"
 ar.font.size = Pt(12)
 
@@ -166,7 +166,10 @@ ar.font.size = Pt(12)
 aff_p = doc.add_paragraph()
 aff_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 aff_p.paragraph_format.space_after = Pt(6)
-afr = aff_p.add_run("Independent Researcher, Dhaka, Bangladesh")
+afr = aff_p.add_run(
+    "¹Independent Researcher, Dhaka, Bangladesh\n"
+    "²Institute of Science and Technology, Dhaka, Bangladesh"
+)
 afr.font.name = "Times New Roman"
 afr.font.size = Pt(11)
 afr.italic = True
@@ -175,7 +178,7 @@ afr.italic = True
 corr_p = doc.add_paragraph()
 corr_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 corr_p.paragraph_format.space_after = Pt(48)
-cr = corr_p.add_run("Correspondence: [email address]")
+cr = corr_p.add_run("Correspondence: khalilurrahmanridoykhan@gmail.com")
 cr.font.name = "Times New Roman"
 cr.font.size = Pt(11)
 
@@ -708,7 +711,7 @@ para(
 # ══════════════════════════════════════════════════════════════════════════════
 
 heading("Competing Interests", 1)
-para("The author declares no competing interests.")
+para("The authors declare no competing interests.")
 
 heading("Funding", 1)
 para("This research received no specific funding from any funding agency in the public, commercial, or not-for-profit sectors.")

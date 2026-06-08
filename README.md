@@ -8,12 +8,15 @@
 
 ---
 
-## Author
+## Authors
 
-**Khalilur Rahman Ridoy Khan**  
+**Khalilur Rahman Ridoy Khan** *(Corresponding Author)*  
 Independent Researcher, Dhaka, Bangladesh  
 📧 khalilurrahmanridoykhan@gmail.com  
 🐙 [@khalilurrrahmanridoykhan](https://github.com/khalilurrrahmanridoykhan)
+
+**Watan Rahman**  
+Institute of Science and Technology, Dhaka, Bangladesh
 
 ---
 
@@ -151,7 +154,7 @@ Saves `Bangladesh_Dengue_Manuscript.docx`.
 
 If you use this data or code, please cite:
 
-> Khan KRR. Epidemiological Characterisation of the Record 2023 Dengue Epidemic in Bangladesh: An 8-Year National Surveillance Analysis (2018–2025). *medRxiv* [Preprint]. 2026. doi: [to be added after submission]
+> Khan KRR, Rahman W. Epidemiological Characterisation of the Record 2023 Dengue Epidemic in Bangladesh: An 8-Year National Surveillance Analysis (2018–2025). *medRxiv* [Preprint]. 2026. doi: [to be added after submission]
 
 **Data source citation:**
 > DGHS Bangladesh. HEOC Dengue Dynamic Dashboard. Directorate General of Health Services, Government of Bangladesh. Available at: https://dashboard.dghs.gov.bd/pages/heoc_dengue_v1.php. Accessed June 2026.
