@@ -8,8 +8,9 @@ import numpy as np
 from pathlib import Path
 from scipy import stats
 
-DATA_DIR = Path("/Users/khalilur/Documents/AIWORK/dengue/data/raw")
-FIG_DIR  = Path("/Users/khalilur/Documents/AIWORK/dengue/figures")
+ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT_DIR / "data" / "raw"
+FIG_DIR = ROOT_DIR / "figures"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 POPULATION_BD = 169_356_251  # BBS 2022 national population

@@ -9,8 +9,9 @@ import matplotlib.colors as mcolors
 import numpy as np
 from pathlib import Path
 
-DATA_DIR = Path("/Users/khalilur/Documents/AIWORK/dengue/data/raw")
-FIG_DIR  = Path("/Users/khalilur/Documents/AIWORK/dengue/figures")
+ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT_DIR / "data" / "raw"
+FIG_DIR = ROOT_DIR / "figures"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 MONTH_ORDER = ["January","February","March","April","May","June",
