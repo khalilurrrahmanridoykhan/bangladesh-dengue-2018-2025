@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Data: DGHS Bangladesh](https://img.shields.io/badge/Data-DGHS%20Bangladesh-blue)](https://dashboard.dghs.gov.bd/pages/heoc_dengue_v1.php)
 [![preprint: medRxiv](https://img.shields.io/badge/Preprint-medRxiv-red)](https://www.medrxiv.org)
+[![Reproduce analysis](https://github.com/khalilurrrahmanridoykhan/bangladesh-dengue-2018-2025/actions/workflows/reproduce.yml/badge.svg)](https://github.com/khalilurrrahmanridoykhan/bangladesh-dengue-2018-2025/actions/workflows/reproduce.yml)
 
 ---
 
@@ -23,6 +24,8 @@ Institute of Science and Technology, Dhaka, Bangladesh
 ## Overview
 
 This repository contains all data, analysis scripts, figures, and the manuscript for a study characterising the 2023 record dengue epidemic in Bangladesh using 8 years of national hospital surveillance data (2018–2025).
+
+![Annual admitted dengue cases in Bangladesh, 2018–2025](figures/fig1_annual_trend.png)
 
 ### Key Findings
 
@@ -95,31 +98,47 @@ bangladesh-dengue-2018-2025/
 ## How to Reproduce
 
 ### 1. Install dependencies
+
 ```bash
-pip install requests beautifulsoup4 pandas matplotlib seaborn scipy python-docx
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-### 2. Collect data from DGHS dashboard
+### 2. Reproduce the published analysis
+
+The repository includes a snapshot of the source data. Reproduce every figure and summary table with:
+
 ```bash
-python scrape_dengue_dashboard.py
+make reproduce
 ```
+
+### 3. Refresh data from the DGHS dashboard
+
+```bash
+make data
+```
+
 Saves 6 CSV files to `data/raw/`.
 
-### 3. Run analysis scripts in order
+### 4. Run analysis scripts individually
+
 ```bash
-cd analysis
-python 01_annual_trend.py
-python 02_epidemic_curve.py
-python 03_seasonal_pattern.py
-python 04_division_analysis.py
-python 05_summary_stats.py
+python analysis/01_annual_trend.py
+python analysis/02_epidemic_curve.py
+python analysis/03_seasonal_pattern.py
+python analysis/04_division_analysis.py
+python analysis/05_summary_stats.py
 ```
+
 Saves figures and tables to `figures/`.
 
-### 4. Generate Word manuscript
+### 5. Generate Word manuscript
+
 ```bash
-python write_manuscript.py
+make manuscript
 ```
+
 Saves `Bangladesh_Dengue_Manuscript.docx`.
 
 ---
